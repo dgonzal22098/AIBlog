@@ -1,0 +1,27 @@
+
+.mainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 100vw;
+  }
+  
+.mainer::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    z-index: -1;
+    pointer-events: none;
+}
+  
+h1{
+    font-size: 3rem;
+}
+  
+.home::before{
+    background: linear-gradient(to bottom, #000000, transparent);
+}
