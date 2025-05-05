@@ -24,11 +24,11 @@ const MiddleCard = styled.div`
     text-align: center;
     display: flex;
     justify-content: center;
-    background-image: url(${bosquePic});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 2rem;
+    background-image: url(${bosquePic});
     filter: grayscale(100%);
 
     &.end{
