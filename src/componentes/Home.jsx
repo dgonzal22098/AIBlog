@@ -56,7 +56,7 @@ const Home = () => {
                 <Separator />
                 <Section >
                     <div className="left">
-                        <h2 >Why Artificial Intelligence</h2>
+                        <h2 >Our blog purpose</h2>
                         <p>
                             Our blog aims to educate, inform, and engage readers about the evolving world of Artificial Intelligence. We provide accessible insights into complex AI concepts, highlight real-world applications, and explore emerging trends that are shaping the future of technology, society, and industry.
                         </p>
