@@ -24,18 +24,15 @@ const References = () => {
             <CopyrightSection className="copyrightSection">
 
                 <div className="copyrightContainer">
-                    <h3 className="titulo">Créditos y Derechos de Autor</h3>
+                    <h3 className="titulo">Credits and Copyright</h3>
                     <p>
-                    Este sitio web fue desarrollado íntegramente por <strong>Diego Alejandro González</strong>, quien se encargó del diseño, implementación técnica y construcción de la plataforma como parte de un proyecto académico.
-                    </p>
+                    This website was entirely developed by Diego Alejandro González, who was responsible for the design, technical implementation, and construction of the platform as part of an academic project.                    </p>
                     <p>
-                    La investigación, recopilación de información y análisis de contenido fueron realizados de manera colaborativa con los integrantes del equipo de trabajo, quienes contribuyeron significativamente a la elaboración y curaduría del material presentado.
-                    </p>
+                    The research, data collection, and content analysis were carried out collaboratively with the members of the research team, who contributed significantly to the development and curation of the material presented.                    </p>
                     <p>
-                    Las imágenes utilizadas provienen de bancos de recursos visuales libres de derechos de autor, tales como <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a> y <a href="https://pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a>, cumpliendo con los lineamientos de uso establecidos por dichas plataformas.
-                    </p>
+                    The images used come from royalty-free visual resource banks such as Unsplash and Pexels, complying with the usage guidelines established by these platforms.                    </p>
                     <p>
-                    © {new Date().getFullYear()} Diego Alejandro González y equipo de investigación. Todos los derechos reservados. El contenido aquí expuesto tiene fines académicos y no comerciales.
+                    © {new Date().getFullYear()} Diego Alejandro González and research team. All rights reserved. The content presented here is for academic and non-commercial purposes.
                     </p>
                 </div>
 
