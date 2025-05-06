@@ -14,6 +14,8 @@ import imagenCuatro from './pictures/consumoelectrico.jpg'
 import imagenContenedorUno from './pictures/aiMano.PNG'
 import imagenContenedorDos from './pictures/ingeAgua.PNG'
 import backgroundFooter from './pictures/AI-water.png'
+import MainTitle from "./MainTitle";
+import MiddleCard from "./MiddleCard";
 
 const Water = () => {
   
@@ -23,7 +25,8 @@ const Water = () => {
             <Container className="water">
                 <div className="tituloCabecera">
                     <p>Data centers are growing like weeds, and they are thirsty</p>
-                    <Title className="tituloWater  neonTitle">Resource usage: Water and Hardware</Title>
+                    <MainTitle texto="Resource usage: Water and Hardware" color="#00fff2" />
+            
                 </div>
                 <InfoContainer>
                     {cardContent.map((object,index) => (
@@ -102,13 +105,15 @@ const Water = () => {
                 </Container>
                 
             </Container>
-            <MiddleCard className='end'>
-                <div className='text'>
-                    <p>The main resource for the ai is electricity and water</p>
-                    <h2>The growing expansion of AI brings with it enormous sustainability challenges, particularly in the use of water, energy, and materials. A combined approach of transparency, technological innovation, and environmental equity is essential for a more sustainable digital future.</h2>
-                </div>
 
-            </MiddleCard>
+            <MiddleCard 
+            bigText='"The development of full artificial intelligence could spell the end of the human race."'
+            smallText="— Stephen Hawking"
+            color="#00fff2"
+            backgroundPicture={backgroundFooter}
+            />
+
+
         
         </>
 )}
@@ -120,38 +125,6 @@ const cardContent = [
     {title: "Global consumption", text:"4% Of global energy consumption is driven by data centers, making them one of the most energy-intensive components of digital infrastructure. ", imagen:imagenTres},
     {title: "Market growth", text:"$7.2 – $19.1 B Is the projected growth of the edge data center market from 2021 to 2026, fueled by rising online streaming and loT adoption ", imagen:imagenCuatro},
 ]
-const MiddleCard = styled.div`
-    position: relative;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 2rem;
-    background-image: url(${backgroundFooter});
-
-    .text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 400px;
-        color: white;
-        z-index: 3;
-        position: relative;
-        gap: 20px;
-        span{
-            font-style: italic;
-        }
-        p{
-            font-weight: 300;
-        }
-    }
-`
 const CardContainer = styled.div`
     width: 100%;
     display: grid;
@@ -195,15 +168,6 @@ const Card = styled.div`
     background-color: white;
     border-radius: 10px;
 `
-const Title = styled.h1`
-    text-align: center;
-    margin-top: 3rem;
-    &.secondaryTitle{
-        color: black;
-        margin-bottom: 2rem;
-    }
-`
-
 const HeaderPicture = styled.div`
     position: absolute;
     width: 100%;

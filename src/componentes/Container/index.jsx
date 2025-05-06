@@ -234,8 +234,9 @@ const Container = styled.div`
         background-color: white;
         padding: 3rem;
         text-align: center;
+        margin-top: 4rem;
         p{
-            margin-bottom: 2rem;
+            margin-bottom:2.2rem;
         }
     }
     .problemWaste{

@@ -11,15 +11,16 @@ import imagenSeis from './pictures/carbonocero.jpg'
 import imagenSiete from './pictures/bajocarbono.jpg'
 import imagenOcho from './pictures/reducir.png'
 import footerPic from './pictures/footerCarbon.JPG'
+import MainTitle from "./MainTitle";
+import MiddleCard from "./MiddleCard";
 
 const Carbon = () => {
   
     return (
         <>
             <HeaderPicture />
-            <Container>
-                <Title className="neonTitle">Let’s start with carbon footprint, what is it?</Title>
-            </Container>
+            <MainTitle texto="Let’s start with carbon footprint, what is it?" color="#55ff00" />
+            
             <NormalContainer>
                 <div className="innerContainer">
 
@@ -98,12 +99,13 @@ const Carbon = () => {
                 </InititativesContainer>
                 <p className="reference">(Power Moves: How CEOs Can Achieve Both AI and Climate Goals, 2024)</p>
             </Container>
-            <MiddleCard className='end'>
-                <div className='text'>
-                    <p>The main resource for the ai is electricity and water</p>
-                    <h2>These are used to lower temperature of data center. Hydro power is one of the main bases to control it.</h2>
-                </div>
-            </MiddleCard>
+
+            <MiddleCard 
+            bigText="These are used to lower temperature of data center. Hydro power is one of the main bases to control it."
+            smallText="The main resource for the ai is electricity and water"
+            color="#55ff00"
+            backgroundPicture={footerPic}
+            />
         </>
 )}
 
@@ -140,14 +142,6 @@ const HeaderPicture = styled.div`
     z-index: -1;
     top: 0;
     filter: grayscale(100%) brightness(50%);
-`
-const Title = styled.h1`
-    text-align: center;
-    margin-top: 3rem;
-    &.secondaryTitle{
-        color: black;
-        margin-bottom: 2rem;
-    }
 `
 const NormalContainer = styled.div`
     margin-top: 2rem;
@@ -280,40 +274,3 @@ const cardContent = [
         imagen: imagenOcho
     },
 ]
-const MiddleCard = styled.div`
-    position: relative;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 2rem;
-    filter: grayscale(100%);
-
-    &.end{
-        background-image: url(${footerPic});
-        filter: grayscale(0%);
-    }
-
-    .text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 400px;
-        color: white;
-        z-index: 3;
-        position: relative;
-        gap: 20px;
-        span{
-            font-style: italic;
-        }
-        p{
-            font-weight: 300;
-        }
-    }
-`

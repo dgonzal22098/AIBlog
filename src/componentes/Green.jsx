@@ -9,6 +9,8 @@ import imagenThirdUno from './pictures/measurement.PNG'
 import imagenThirdDos from './pictures/report.PNG'
 import imagenThirdTres from './pictures/offset.PNG'
 import backgroundFooter from './pictures/greenailogo.jpg'
+import MainTitle from "./MainTitle";
+import MiddleCard from "./MiddleCard";
 
 
 
@@ -18,7 +20,8 @@ const Green = () => {
     <>
         <HeaderPicture />
         <Container className="green">
-            <Title className="greenTitle">Green AI: Shaping Innovation with Environmental Responsibility</Title>
+            <MainTitle texto="Green AI: Shaping Innovation with Environmental Responsibility" color="#80ff00" />
+
             <InnerGreenContainer>
                 <div className="left">
                     <h2>Green AI: Building a Smarter, Cleaner Future</h2>
@@ -126,13 +129,13 @@ const Green = () => {
 
 
         </Container>
-        <MiddleCard>
-            <div className="text">
-                <h1>“Green AI is about doing more with less: more intelligence, less environmental cost.”</h1>
-                <p>– Roy Schwartz, Noah A. Smith, Oren Etzioni
-                (from the paper “Green AI”, 2019)</p>
-            </div>
-        </MiddleCard>
+
+        <MiddleCard 
+        bigText="“Green AI is about doing more with less: more intelligence, less environmental cost.”"
+        smallText="– Roy Schwartz, Noah A. Smith, Oren Etzioni
+                (from the paper “Green AI”, 2019)"
+        color="#80ff00"
+        backgroundPicture={backgroundFooter}/>
 
     
     </>
@@ -162,7 +165,6 @@ const cardContent = [
         color:"#FFAD9E",
     },
 ];
-
 const Card = styled.div`
     display: flex;
     padding: 2rem;
@@ -176,8 +178,6 @@ const Card = styled.div`
         text-align: center;
     }
 `
-
-
 const InnerGreenContainer = styled.div`
     margin: 2rem 0;
     width: 100%;
@@ -305,7 +305,6 @@ const InnerGreenContainer = styled.div`
         font-style: italic;
     }
 `
-
 const Title = styled.h1`
     text-align: center;
     margin-top: 3rem;
@@ -314,7 +313,6 @@ const Title = styled.h1`
         margin-bottom: 2rem;
     }
 `
-
 const HeaderPicture = styled.div`
     position: absolute;
     width: 100%;
@@ -328,35 +326,36 @@ const HeaderPicture = styled.div`
     filter: grayscale(100%) brightness(50%);
 `
 
-const MiddleCard = styled.div`
-    position: relative;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 2rem;
-    background-image: url(${backgroundFooter});
 
-    .text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 400px;
-        color: white;
-        z-index: 3;
-        position: relative;
-        gap: 20px;
-        span{
-            font-style: italic;
-        }
-        p{
-            font-weight: 300;
-        }
-    }
-`
+// const MiddleCard = styled.div`
+//     position: relative;
+//     width: 100%;
+//     height: 400px;
+//     text-align: center;
+//     display: flex;
+//     justify-content: center;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     margin-bottom: 2rem;
+//     background-image: url(${backgroundFooter});
+
+//     .text{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         width: 60%;
+//         height: 400px;
+//         color: white;
+//         z-index: 3;
+//         position: relative;
+//         gap: 20px;
+//         span{
+//             font-style: italic;
+//         }
+//         p{
+//             font-weight: 300;
+//         }
+//     }
+// `

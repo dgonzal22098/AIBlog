@@ -9,7 +9,7 @@ import saraPic from './pictures/saraPic.png'
 import JuanPic from './pictures/juanFoto.jpg'
 import manodos from './pictures/manodos.png'
 import Container from './Container'
-import FlipCard from "./FlipCard"
+import MainTitle from "./MainTitle"
 
 
 const Home = () => {
@@ -36,7 +36,8 @@ const Home = () => {
   
     return (
         <>
-            <Title className="homeTitle">Artificial Intelligence (AI)</Title>
+            <MainTitle texto="Artificial Intelligence (AI)" color="#00f0ff" />
+
             <TeamContainer>
 
                 {team.map((person, index) => (
@@ -117,9 +118,9 @@ const team = [
     },
 ];
 
-const Title = styled.h1`
-    margin: 2rem 0 10rem 0;    
-`
+// const Title = styled.h1`
+//     margin: 2rem 0 10rem 0;    
+// `
 const TeamContainer = styled.div`
     width: 80%;
     display: grid;

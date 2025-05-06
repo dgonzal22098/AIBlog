@@ -5,14 +5,17 @@ import minerales from './pictures/minerales.jpg'
 import reunion from './pictures/reunion.jpg'
 import chain from './pictures/chain.jpg'
 import FlipCard from "./FlipCard"
-import backgroundFooter from './pictures/wasteFooter.png'
+// import backgroundFooter from './pictures/wasteFooter.png'
+import backgroundFooter from './pictures/footerPicWaste.jpg'
+import MainTitle from "./MainTitle"
+import MiddleCard from "./MiddleCard"
 
 const Waste = () => {
     
     return (
         <>
             <HeaderPicture />
-            <Title>E-Waste and AI: The Hardware Behind the Intelligence</Title>
+            <MainTitle texto="E-Waste and AI: The Hardware Behind the Intelligence" color="#ff0000" />
             <Container className="wasteHeader">
                 <p>Artificial Intelligence may feel like it is all in the “cloud”, but it is powered by real physical machines. These machines have an environmental cost not just when they are running, but even before they are built and long after they are thrown away.</p>
                 <h4>Let us take a closer look at how hardware contributes to AI's environmental footprint</h4>
@@ -108,15 +111,14 @@ const Waste = () => {
             
             
             <Separator />
-            
-            <MiddleCard>
-                <div className="text">
-                    <h1>“Green AI is about doing more with less: more intelligence, less environmental cost.”</h1>
-                    <p>– Roy Schwartz, Noah A. Smith, Oren Etzioni
-                    (from the paper “Green AI”, 2019)</p>
-                </div>
-                <img src={backgroundFooter} alt="" />
-            </MiddleCard>
+
+            <MiddleCard 
+            smallText="– Roy Schwartz, Noah A. Smith, Oren Etzioni
+                    (from the paper “Green AI”, 2019)"
+            bigText="“Green AI is about doing more with less: more intelligence, less environmental cost.”"
+            color="#ff0000"
+            backgroundPicture={backgroundFooter}
+            />
 
         
         </>
@@ -128,38 +130,6 @@ const Reference = styled.p`
     margin-top: 6rem;
     &.second{
         margin-top: 1rem;
-    }
-`
-const MiddleCard = styled.div`
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-    margin-top: 5rem;
-    padding-top: 3rem;
-    box-sizing: border-box;
-    .text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 400px;
-        color: black;
-        z-index: 3;
-        position: relative;
-        gap: 20px;
-        span{
-            font-style: italic;
-        }
-        p{
-            font-weight: 300;
-        }
     }
 `
 

@@ -29,6 +29,10 @@
     font-weight: bold;
     transition: color 0.3s ease;
   }
+.nav-links a.active {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
   
 .nav-links a:hover {
     color: #00bfff;

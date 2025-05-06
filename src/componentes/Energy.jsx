@@ -4,6 +4,8 @@ import Container from './Container'
 import doctorPic from './pictures/doctor.jpg'
 import bosquePic from './pictures/bosque.jpg'
 import faro from './pictures/faro.jpg'
+import MainTitle from './MainTitle'
+import MiddleCard from './MiddleCard'
 
 
 const Energy = () => {
@@ -12,7 +14,7 @@ const Energy = () => {
     <>
         <HeaderPicture />
         <Container>
-            <Title className='neonTitle'>The Energy Behind Intelligence: AI’s Environmental Impact</Title>
+            <MainTitle texto="The Energy Behind Intelligence: AI’s Environmental Impact" color="#FFFF00" />
             <Introduction>
                 <div className='textCont'>
                     <h2>Artificial Intelligence has transformed many industries (healthcare, finance and others) driving innovation and efficiency.</h2>
@@ -43,12 +45,17 @@ const Energy = () => {
 
             </CardContainer>
         </Container>
-        <MiddleCard>
-            <div className='text'>
-                <h2>“Artificial Intelligence will either accelerate the climate crisis or help us solve it. The path we choose matters now more than ever.”</h2>
-                <p>– Timnit Gebru, founder of DAIR (Distributed AI Research Institute)</p>
-            </div>
-        </MiddleCard>
+
+
+        <MiddleCard 
+        bigText="“Artificial Intelligence will either accelerate the climate crisis or help us solve it. The path we choose matters now more than ever.”"
+        smallText="– Timnit Gebru, founder of DAIR (Distributed AI Research Institute)"
+        color="#FFFF00"
+        backgroundPicture={bosquePic}
+        />
+
+
+
         <Container>
             <Introduction className='secondIntroduction'>
                 <div className='textCont lefTexter'>
@@ -123,15 +130,14 @@ const Energy = () => {
             </Container>
 
         </Finalizer>
-        <MiddleCard className='end'>
-            <div className='text'>
-                <p>– Roy Schwartz, Noah A. Smith, Oren Etzioni
-                (from the paper <span>“Green AI”</span>, 2019)</p>
-                <h2>“Green AI is about doing more with less: more intelligence, less environmental cost.”</h2>
-                <p>The energy consumption of AI presents a growing environmental challenge. As AI becomes increasingly embedded in everyday applications, mitigating its impact is crucial. By embracing renewable energy, optimizing algorithmic efficiency, and innovating through new technologies, the AI sector can evolve sustainably and responsibly. </p>
-            </div>
 
-        </MiddleCard>
+        <MiddleCard 
+        bigText="“Green AI is about doing more with less: more intelligence, less environmental cost.”"
+        smallText="– Roy Schwartz, Noah A. Smith, Oren Etzioni
+                (from the paper <span>“Green AI”</span>, 2019)"
+        color="#ffee00"
+        backgroundPicture={faro}
+        />
 
         
     </>
@@ -151,44 +157,6 @@ const HeaderPicture = styled.div`
     z-index: -1;
     top: 0;
     filter: grayscale(100%) brightness(50%);
-`
-const MiddleCard = styled.div`
-    position: relative;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 2rem;
-    background-image: url(${bosquePic});
-    filter: grayscale(100%);
-
-    &.end{
-        background-image: url(${faro});
-        filter: grayscale(0%);
-    }
-
-    .text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 400px;
-        color: white;
-        z-index: 3;
-        position: relative;
-        gap: 20px;
-        span{
-            font-style: italic;
-        }
-        p{
-            font-weight: 300;
-        }
-    }
 `
 const Title = styled.h1`
     text-align: center;
