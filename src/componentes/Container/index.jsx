@@ -17,7 +17,42 @@ const Container = styled.div`
     }
     h1{
         color: white;
+        &.neonTitle{
+            transition: text-shadow .2s ease-in-out, color .3s ease;
+            &:hover{
+                color: #0ff;
+                cursor: default;
+                text-shadow: 
+                0 0 5px #0ff,
+                0 0 10px #0ff,
+                0 0 20px #0ff,
+                0 0 40px #0ff;
+            }
+        }
+        &.neonTitleWhite{
+            transition: text-shadow .2s ease-in-out, color .3s ease;
+            &:hover{
+                color: #00BFFF;
+                cursor: default;
+                text-shadow:
+                    0 0 5px #00BFFF,
+                    0 0 10px #00BFFF,
+                    0 0 15px #00BFFF;
+            }
+        }
+        &.greenTitle{
+            transition: text-shadow .2s ease-in-out, color .3s ease;
+            &:hover{
+                color: #39FF14;
+                cursor: default;
+                text-shadow:
+                    0 0 5px #39FF14,
+                    0 0 10px #39FF14,
+                    0 0 15px #39FF14;
+            }
+        }
     }
+
     &.carbon{
         width: 80%;
         margin-bottom: 3rem;
@@ -31,6 +66,16 @@ const Container = styled.div`
             }
             h2{
                 font-size: 2rem;
+                transition: text-shadow 0.3s ease, color 0.3s ease;
+                &:hover{
+                    color: #D8B7FF;
+                    text-shadow:
+                        0 0 5px #D8B7FF,
+                        0 0 10px #D8B7FF,
+                        0 0 20px #D8B7FF,
+                        0 0 40px #D8B7FF;
+
+                }
             }
         }
 
@@ -67,6 +112,17 @@ const Container = styled.div`
         .inititativesTitle{
             font-size: 2rem;
             color: #7219BF;
+            transition: text-shadow 0.3s ease, color 0.3s ease;
+            &:hover{
+                color: #D8B7FF;
+                text-shadow:
+                    0 0 5px #D8B7FF,
+                    0 0 10px #D8B7FF,
+                    0 0 20px #D8B7FF,
+                    0 0 40px #D8B7FF;
+
+            }
+
         }
         .reference{
         margin: 2rem;
@@ -111,6 +167,15 @@ const Container = styled.div`
         .secondaryTitle{
             color: black;
             margin-bottom: 2rem;
+            text-align: center;
+            transition: text-shadow .2s ease-in-out, color .3s ease;
+            &:hover{
+                color: #FF8C42;
+                text-shadow:
+                    0 0 5px #FF8C42,
+                    0 0 10px #FF8C42,
+                    0 0 15px #FF8C42;
+            }
         }
         .cardInformative{
             align-items: center;
@@ -139,6 +204,16 @@ const Container = styled.div`
             img{
                 width: 40%;
                 border-radius: 50%;
+                transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow:
+                        0 0 15px #0ff,
+                        0 0 30px #0ff,
+                        0 0 45px #0ff,
+                        0 0 60px #0ff;
+                }
+                
             }
             .rowerText{
                 align-items: center;
@@ -155,9 +230,69 @@ const Container = styled.div`
             }
         }
     }
-    &.green{
+    &.wasteHeader{
+        background-color: white;
+        padding: 3rem;
+        text-align: center;
+        p{
+            margin-bottom: 2rem;
+        }
+    }
+    .problemWaste{
+        margin-top: 2rem;
         
-
+    }
+    &.solutions{
+        
+    }
+    .solutionCard{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    &.waste{
+        .bubbleContainer{
+            width: 100%;
+            display: flex;
+            margin-bottom: 3rem;
+            .bubbleBox{
+                transition: box-shadow 0.3s ease-in-out;
+                &:hover{
+                    cursor: default;
+                    box-shadow:
+                        0 0 5px #0ff,
+                        0 0 10px #0ff,
+                        0 0 15px #0ff,
+                        0 0 20px #0ff;
+                }
+            }
+            .image-container {
+                position: relative;
+                width: 20%;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -20px;
+                    transition: left 0.3s ease;
+                    &.inverted{
+                        left: auto;
+                        right: -20px;
+                    }
+                }
+            }
+            &.inverted{
+                justify-content: flex-end;
+            }
+            .bubbleBox{
+                h3{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
     }
 
 `

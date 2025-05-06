@@ -5,134 +5,6 @@ import doctorPic from './pictures/doctor.jpg'
 import bosquePic from './pictures/bosque.jpg'
 import faro from './pictures/faro.jpg'
 
-const HeaderPicture = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    background-image: url(${backgroundPicture});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    top: 0;
-    filter: grayscale(100%) brightness(50%);
-`
-const MiddleCard = styled.div`
-    position: relative;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 2rem;
-    background-image: url(${bosquePic});
-    filter: grayscale(100%);
-
-    &.end{
-        background-image: url(${faro});
-        filter: grayscale(0%);
-    }
-
-    .text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 400px;
-        color: white;
-        z-index: 3;
-        position: relative;
-        gap: 20px;
-        span{
-            font-style: italic;
-        }
-        p{
-            font-weight: 300;
-        }
-    }
-`
-const Title = styled.h1`
-    text-align: center;
-    margin-top: 3rem;
-    &.secondaryTitle{
-        color: black;
-        margin-bottom: 2rem;
-    }
-`
-const Separator = styled.hr`
-    margin: 1rem 0;
-    width: 100%;
-    background-color: grey;
-    border-radius: 2rem;
-`
-const Introduction = styled.div`
-    margin: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-
-    .textCont{
-        padding: 2rem 1rem 2rem 2rem;
-        h2{
-            margin-bottom: 2rem;
-        }
-    }
-    img{
-        width: 50%;
-    }
-    &.secondIntroduction{
-
-        .lefTexter{
-            width: 50%;
-        }
-        .rightTexter{
-            width: 50%;
-            display: grid;
-            margin-left: 3rem;
-            grid-template-columns: 1fr;
-            grid-gap: 20px;
-            
-        }
-    }
-
-`
-const CardContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    margin-bottom: 2rem;
-`
-const Card = styled.div`
-    display: flex;
-    padding: 1rem;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 10px;
-    .prefix{
-        color: #7219BF;
-        font-weight: bold;
-    }
-
-`
-const Finalizer = styled.div`
-    width: 100%;
-    background-color: #F2F0FE;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`
-
-
 
 const Energy = () => {
   
@@ -140,7 +12,7 @@ const Energy = () => {
     <>
         <HeaderPicture />
         <Container>
-            <Title>The Energy Behind Intelligence: AI’s Environmental Impact</Title>
+            <Title className='neonTitle'>The Energy Behind Intelligence: AI’s Environmental Impact</Title>
             <Introduction>
                 <div className='textCont'>
                     <h2>Artificial Intelligence has transformed many industries (healthcare, finance and others) driving innovation and efficiency.</h2>
@@ -213,7 +85,7 @@ const Energy = () => {
         </Container>
         <Finalizer>
 
-            <Container>
+            <Container className='energy'>
                 <Title className='secondaryTitle'>Factors Influencing Energy Consumption</Title>
                 <CardContainer>
                     <Card>
@@ -266,3 +138,152 @@ const Energy = () => {
 )}
 
 export default Energy
+
+
+const HeaderPicture = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background-image: url(${backgroundPicture});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: 0;
+    filter: grayscale(100%) brightness(50%);
+`
+const MiddleCard = styled.div`
+    position: relative;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+    background-image: url(${bosquePic});
+    filter: grayscale(100%);
+
+    &.end{
+        background-image: url(${faro});
+        filter: grayscale(0%);
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 400px;
+        color: white;
+        z-index: 3;
+        position: relative;
+        gap: 20px;
+        span{
+            font-style: italic;
+        }
+        p{
+            font-weight: 300;
+        }
+    }
+`
+const Title = styled.h1`
+    text-align: center;
+    margin-top: 3rem;
+    transition: text-shadow .2s ease-in-out, color .3s ease;
+    &.secondaryTitle{
+        
+        color: black;
+        margin-bottom: 2rem;
+        &:hover{
+            color: #FFA500; /* naranja clásico */
+            cursor: default;
+            text-shadow:
+                0 0 5px #ffae42,
+                0 0 10px #ffae42,
+                0 0 20px #ffae42,
+                0 0 30px #ffaa33;
+        }
+    }
+`
+const Separator = styled.hr`
+    margin: 1rem 0;
+    width: 100%;
+    background-color: grey;
+    border-radius: 2rem;
+`
+const Introduction = styled.div`
+    margin: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+    .textCont{
+        padding: 2rem 1rem 2rem 2rem;
+        h2{
+            margin-bottom: 2rem;
+        }
+    }
+    img{
+        width: 50%;
+    }
+    &.secondIntroduction{
+
+        .lefTexter{
+            width: 50%;
+        }
+        .rightTexter{
+            width: 50%;
+            display: grid;
+            margin-left: 3rem;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            
+        }
+    }
+
+`
+const CardContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 2rem;
+`
+const Card = styled.div`
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform .2s ease-in-out;
+
+
+
+    &:hover{
+        transform: scale(1.05);
+    }
+    .prefix{
+        color: #7219BF;
+        font-weight: bold;
+    }
+
+`
+const Finalizer = styled.div`
+    width: 100%;
+    background-color: #F2F0FE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+
+

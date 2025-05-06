@@ -6,9 +6,11 @@ import Energy from "./componentes/Energy";
 import Carbon from './componentes/Carbon';
 import Water from './componentes/Water';
 import Green from './componentes/Green';
-import Extra from './componentes/Extra';
 import Home from './componentes/Home';
 import References from './componentes/References';
+import Waste from './componentes/Extra';
+import ScrollToTop from './componentes/ScrollToTop';
+import ScrollToTopButton from './componentes/ScrollToTopButton';
 
 
 const AppContent = () => {
@@ -20,6 +22,8 @@ const AppContent = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
+      <ScrollToTopButton />
       <div className={`mainer ${currentPath}`}>
         <Container>
           <Routes>
@@ -28,7 +32,7 @@ const AppContent = () => {
             <Route path="/carbon" element={<Carbon />} />
             <Route path="/water" element={<Water />} />
             <Route path="/green" element={<Green />} />
-            <Route path="/extra" element={<Extra />} />
+            <Route path="/waste" element={<Waste />} />
             <Route path="/references" element={<References />} />
           </Routes>
         </Container>

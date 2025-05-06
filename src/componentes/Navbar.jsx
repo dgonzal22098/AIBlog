@@ -29,7 +29,7 @@ const Navbar = () => {
         <li><Link to="/carbon">Carbon Footprint</Link></li>
         <li><Link to="/water">Water Usage</Link></li>
         <li><Link to="/green">Green AI</Link></li>
-        <li><Link to="/extra">Extra</Link></li>
+        <li><Link to="/waste">E-Waste</Link></li>
         <li><Link to="/references">References</Link></li>
       </ul>
     </nav>

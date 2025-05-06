@@ -71,7 +71,14 @@ const references = [
     "Strubell, E., Ganesh, A., & McCallum, A. (2019). Energy and Policy Considerations for Deep Learning in NLP.",
     "Thompson, N. C., Greenewald, K. H., Lee, K., & Manso, G. F. (2020). The Computational Limits of Deep Learning. Communications of the ACM, 63(5), 93-101.",
     "Vincent, J. (2022). AI’s Growing Carbon Footprint. The Verge.",
-    "Xu, P., Lu, Y., & Song, Z. (2022). Sustainable Artificial Intelligence: Balancing Accuracy and Carbon Emissions. IEEE Transactions on Sustainable Computing, 7(2), 233-245."  
+    "Xu, P., Lu, Y., & Song, Z. (2022). Sustainable Artificial Intelligence: Balancing Accuracy and Carbon Emissions. IEEE Transactions on Sustainable Computing, 7(2), 233-245.",
+    "Introducing the Framework Desktop and newest Framework Laptop 13. (n.d.). Framework. https://frame.work/",
+    "Apple trade in. (n.d.). Apple. https://www.apple.com/shop/trade-in#recycle",
+    "Our goals for sustainable operations - Google Sustainability. (n.d.). Sustainability. https://sustainability.google/operating-sustainably/",
+    "Responsible Minerals Initiative. (n.d.). https://www.responsiblemineralsinitiative.org/",
+    "Forti, V., Baldé, C. P., Kuehr, R., & Bel, G. (2020). The Global E-waste Monitor 2020: Quantities, flows, and the circular economy potential. United Nations University (UNU)/United Nations Institute for Training and Research (UNITAR) – co-hosted SCYCLE Programme, International Telecommunication Union (ITU) & International Solid Waste Association (ISWA).",
+    "Chemical Safety and Health Unit (CHE). (2021, June 15). Children and digital dumpsites: e-waste exposure and child health. https://www.who.int/publications/i/item/9789240023901",
+    
 ]
 
 const ReferenceSection = styled.section`

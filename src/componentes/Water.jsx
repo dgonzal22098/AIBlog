@@ -23,7 +23,7 @@ const Water = () => {
             <Container className="water">
                 <div className="tituloCabecera">
                     <p>Data centers are growing like weeds, and they are thirsty</p>
-                    <Title className="tituloWater">Resource usage: Water and Hardware</Title>
+                    <Title className="tituloWater  neonTitle">Resource usage: Water and Hardware</Title>
                 </div>
                 <InfoContainer>
                     {cardContent.map((object,index) => (
@@ -173,6 +173,15 @@ const InfoContainer = styled.div`
         }
         .picture{
             width: 50%;
+            transition: transform 0.3s ease-in-out,box-shadow 0.3s ease, background 0.3s ease;
+            &:hover{
+                transform: scale(1.05);
+                background: #00BFFF;
+                box-shadow:
+                    0 0 5px #00BFFF,
+                    0 0 10px #00BFFF,
+                    0 0 15px #00BFFF;
+            }
         }
     }
 `

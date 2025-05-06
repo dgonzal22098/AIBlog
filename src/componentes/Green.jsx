@@ -18,7 +18,7 @@ const Green = () => {
     <>
         <HeaderPicture />
         <Container className="green">
-            <Title>Green AI: Shaping Innovation with Environmental Responsibility</Title>
+            <Title className="greenTitle">Green AI: Shaping Innovation with Environmental Responsibility</Title>
             <InnerGreenContainer>
                 <div className="left">
                     <h2>Green AI: Building a Smarter, Cleaner Future</h2>
@@ -73,7 +73,7 @@ const Green = () => {
                     <p>Part of this effort includes its AI operations, which are divided into the following</p>
 
                 </div>
-                <div className="right">
+                <div className="right third">
                     <div className="row">
                         <div className="textCont">
                             <h2>Measurement</h2>
@@ -197,9 +197,13 @@ const InnerGreenContainer = styled.div`
         }
     }
     .right{
-        background-color: #f5f5f5;
+        background-color: #a8e6cf;
         padding: 3rem;
         gap: 20px;
+        transition: background-color 0.3s ease-in-out;
+        &:hover{
+            background-color: #9fff9f;
+        }
         
         ul{
             padding-left: 3rem;
@@ -221,9 +225,15 @@ const InnerGreenContainer = styled.div`
             grid-gap: 20px;
             
             .tarjeta{
-                transition: transform .2s ease-in-out;
+                transition: transform .2s ease-in-out, box-shadow 0.2s ease;
+                
 
                 &:hover{
+                    box-shadow:
+                        0 0 5px #4caf50,
+                        0 0 10px #4caf50,
+                        0 0 20px #4caf50,
+                        0 0 30px #4caf50;
                     transform: scale(1.05);
                 }
             }
@@ -232,6 +242,9 @@ const InnerGreenContainer = styled.div`
     &.third{
         .right{
             width: 65%;
+            &.third{
+                background-color: #f5f5f5;
+            }
         }
         .row{
             display: flex;
@@ -252,6 +265,15 @@ const InnerGreenContainer = styled.div`
         }
         img{
             width: 50%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            &:hover{
+                transform: scale(1.05);
+                box-shadow:
+                    0 0 5px #88d498,
+                    0 0 10px #88d498,
+                    0 0 15px #88d498,
+                    0 0 20px #88d498;
+            }
         }
         
     }

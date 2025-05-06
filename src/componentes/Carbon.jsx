@@ -18,7 +18,7 @@ const Carbon = () => {
         <>
             <HeaderPicture />
             <Container>
-                <Title>Let’s start with carbon footprint, what is it?</Title>
+                <Title className="neonTitle">Let’s start with carbon footprint, what is it?</Title>
             </Container>
             <NormalContainer>
                 <div className="innerContainer">
@@ -42,8 +42,7 @@ const Carbon = () => {
                 <div className="title2">
                     <p>(DAKA, 2024)</p>
 
-                    <h2>(Daka, 2024)
-                    So, how does AI carbon footprint impact our environment?</h2>
+                    <h2>So, how does AI carbon footprint impact our environment?</h2>
                 </div>
                 <div className="rower">
                     <div className="texter ">
@@ -61,7 +60,7 @@ const Carbon = () => {
                 </div>
                 <InfoCard>
                     <CheckIcon size={40}/>
-                    <h1 className="titulo">What are the initiatives to reduce it in the future?</h1>
+                    <h1 className="titulo neonTitleWhite">What are the initiatives to reduce it in the future?</h1>
                     <p>Part of a forecast and projection of energy demand, it is estimated that data centers could be producing more than the double by 2030. (Boston Consulting Group). </p>
                     <p>It is important that we as society start to build a strong sense or urgency around the initiatives to resolve this, because at the end even though we don’t see it right now, is going to be a problem for us, every single year we are running out of our natural resources, there for, we need to demand a long run solution or at least initiatives.  </p>
                     <p className="reference">(Understanding the Carbon Footprint of AI and How to Reduce It | Carbon Direct, n.d.)</p>
@@ -86,7 +85,7 @@ const Carbon = () => {
                             ) : (
                                 <>
                                     <img src={object.imagen} className="picture" />
-                                    <Card className="cardContainer">
+                                    <Card className="cardContainer par">
                                         <p className="prefix">{object.prefix}</p>
                                         <h2>{object.title}</h2>
                                         <p>{object.text}</p>
@@ -196,8 +195,20 @@ const InititativesContainer = styled.div`
         width: 100%;
         display: flex;
         justify-content: space-between;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, background 0.3s ease;
+        &:hover{
+            background: #BA55D3;
+            box-shadow:
+                0 0 5px #BA55D3,
+                0 0 10px #BA55D3,
+                0 0 15px #BA55D3;
+            transform: scale(1.05);
+        }
         .cardContainer{
             width: 50%;
+            &.impar,&.par{
+                padding-left: 2rem;
+            }
         }
         .picture{
             width: 50%;
@@ -217,11 +228,7 @@ const Card = styled.div`
     .prefix{
         color: #7219BF;
         font-weight: bold;
-    }
-    &.impar{
-        padding: 3rem 3rem 3rem 0;
-    }
-
+    } 
 `
 const cardContent = [
     {

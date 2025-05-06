@@ -5,9 +5,11 @@ import lozanoPic from './pictures/lozanoPic.jpg'
 import manouno from './pictures/manouno.png'
 import fotoDiego from './pictures/profilePic.jpg'
 import fotoValentina from './pictures/valentina.jpg'
+import saraPic from './pictures/saraPic.png'
 import JuanPic from './pictures/juanFoto.jpg'
 import manodos from './pictures/manodos.png'
 import Container from './Container'
+import FlipCard from "./FlipCard"
 
 
 const Home = () => {
@@ -33,47 +35,51 @@ const Home = () => {
 
   
     return (
-    <Container>
-        <Title className="homeTitle">Artificial Intelligence (AI)</Title>
-        <TeamContainer>
+        <>
+            <Title className="homeTitle">Artificial Intelligence (AI)</Title>
+            <TeamContainer>
 
-            {team.map((person, index) => (
-                <PersonCard>
-                    <Picture src={person.foto}/>
-                    <h2>{person.name}</h2>
-                    <p className="career">{person.career}</p>
-                    <p>{person.description}</p>
-                </PersonCard>
-            ))}
+                {team.map((person, index) => (
+                    <PersonCard>
+                        <Picture src={person.foto}/>
+                        <div className="text">
+                            <h2>{person.name}</h2>
+                            <p className="career">{person.career}</p>
+                            <p>{person.description}</p>
+                        </div>
+                    </PersonCard>
+                ))}
 
-        </TeamContainer>
-        <Separator />
-        <Section >
-            <div className="left">
-                <h2 >Why Artificial Intelligence</h2>
-                <p>
-                    Our blog aims to educate, inform, and engage readers about the evolving world of Artificial Intelligence. We provide accessible insights into complex AI concepts, highlight real-world applications, and explore emerging trends that are shaping the future of technology, society, and industry.
-                </p>
-            </div>
-            <img src={manouno} className="floating-image"/>
-        </Section>
-        <Section className="dos">
-            <img src={manodos} className="floating-image secondHand"/>
+            </TeamContainer>
+            <Container>
+                <Separator />
+                <Section >
+                    <div className="left">
+                        <h2 >Why Artificial Intelligence</h2>
+                        <p>
+                            Our blog aims to educate, inform, and engage readers about the evolving world of Artificial Intelligence. We provide accessible insights into complex AI concepts, highlight real-world applications, and explore emerging trends that are shaping the future of technology, society, and industry.
+                        </p>
+                    </div>
+                    <img src={manouno} className="floating-image"/>
+                </Section>
+                <Section className="dos">
+                    <img src={manodos} className="floating-image secondHand"/>
 
-            <div className="right bigger">
-                
-            </div>
-            <div className="right">
-                <h2>Importance Nowadays</h2>
-                <p>
-                    Artificial Intelligence is revolutionizing the way we live and work. From personalized healthcare and smart assistants to autonomous vehicles and ethical challenges, AI is driving innovation across all sectors. Understanding its impact is essential for staying informed and empowered in a rapidly changing digital era.
-                </p>
-            </div>
-        </Section>
-        <h1 className="Final">Let's Dive Into It !</h1>
-        <Button onClick={toEnergy}>Let's Go</Button>
+                    <div className="right bigger">
+                        
+                    </div>
+                    <div className="right">
+                        <h2>Importance Nowadays</h2>
+                        <p>
+                            Artificial Intelligence is revolutionizing the way we live and work. From personalized healthcare and smart assistants to autonomous vehicles and ethical challenges, AI is driving innovation across all sectors. Understanding its impact is essential for staying informed and empowered in a rapidly changing digital era.
+                        </p>
+                    </div>
+                </Section>
+                <h1 className="Final">Let's Dive Into It !</h1>
+                <Button onClick={toEnergy}>Let's Go</Button>
 
-    </Container>
+            </Container>
+        </>
 )}
 
 export default Home
@@ -89,7 +95,7 @@ const team = [
         name: "Sara Daniela Pineda Garzón", 
         career:"International Business", 
         description: "She loves to learn new things. What she enjoys the most about her career is that she can learn other cultures.",
-        foto: fotoDiego,
+        foto: saraPic,
     },
     {
         name: "Juan Camilo Castiblanco González", 
@@ -112,8 +118,7 @@ const team = [
 ];
 
 const Title = styled.h1`
-    margin: 2rem 0 10rem 0;
-    
+    margin: 2rem 0 10rem 0;    
 `
 const TeamContainer = styled.div`
     width: 80%;
@@ -126,22 +131,27 @@ const TeamContainer = styled.div`
 const PersonCard = styled.div`
     margin-top: 1rem;
     width: 100%;
-    max-width: 300px;
-    height: 100%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
     transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+    .text{
+        padding: 2rem;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
 
-    img{
-        transition: transform .3s ease-in-out;
-    }
+        p{
+            text-align: center;
+        }
 
-    img:hover{
-        transform: rotate(2deg) scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        &:hover {
+        border-bottom: 1px solid #ff9800;
+        box-shadow: 0 4px 10px rgba(255, 152, 0, 0.6);
+        }
 
     }
 
@@ -155,6 +165,7 @@ const PersonCard = styled.div`
     h2 {
         text-align: center;
     }
+
 `;
 const Picture = styled.img`
     border-radius: 50%;
