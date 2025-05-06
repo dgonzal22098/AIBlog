@@ -66,9 +66,6 @@ const Home = () => {
                 <Section className="dos">
                     <img src={manodos} className="floating-image secondHand"/>
 
-                    <div className="right bigger">
-                        
-                    </div>
                     <div className="right">
                         <h2>Importance Nowadays</h2>
                         <p>
@@ -184,6 +181,7 @@ const Section = styled.div`
     align-items: center;
     width: 80%;
     margin-bottom: 2rem;
+    
     h2 {
         margin-bottom: 3rem;
     }
@@ -197,8 +195,13 @@ const Section = styled.div`
     }
     .left, .right{
         width: 50%;
+        transition: box-shadow .3s ease, transform .3s ease;
         &.bigger{
             width: 60%;
+        }
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(136, 39, 245, 0.8);
         }
     }
     .dos{
