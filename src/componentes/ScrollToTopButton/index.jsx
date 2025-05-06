@@ -42,6 +42,7 @@ const Button = styled.button`
   cursor: pointer;
   box-shadow: 0 0 8px rgba(39, 20, 82, 0.3); // más suave
   transition: opacity 0.3s ease-in-out, transform 0.2s;
+  z-index: 999;
 
   &:hover {
     transform: scale(1.1);
