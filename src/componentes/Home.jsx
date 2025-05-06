@@ -158,6 +158,7 @@ const PersonCard = styled.div`
 
     &:hover{
         transform: scale(1.05);
+        cursor: default;
         z-index: 10;
     }
     .career {
