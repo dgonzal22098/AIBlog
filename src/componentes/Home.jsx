@@ -195,8 +195,16 @@ const Section = styled.div`
     }
     .left, .right{
         width: 50%;
+        padding: 2rem;
+        border-radius: 10px;
+        transition: box-shadow .3s ease, transform .3s ease;
         &.bigger{
             width: 60%;
+        }
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(107, 64, 224, 0.452);
+            cursor: default;
         }
     }
     .dos{
