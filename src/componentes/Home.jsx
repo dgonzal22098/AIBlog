@@ -151,6 +151,7 @@ const PersonCard = styled.div`
         &:hover {
         border-bottom: 1px solid #ff9800;
         box-shadow: 0 4px 10px rgba(255, 152, 0, 0.6);
+        cursor: default;
         }
 
     }
