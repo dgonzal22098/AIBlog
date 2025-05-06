@@ -43,7 +43,7 @@ const Carbon = () => {
                 <div className="title2">
                     <p>(DAKA, 2024)</p>
 
-                    <h2>So, how does AI carbon footprint impact our environment?</h2>
+                    <Subtitle color="red">So, how does AI carbon footprint impact our environment?</Subtitle>
                 </div>
                 <div className="rower">
                     <div className="texter ">
@@ -59,7 +59,7 @@ const Carbon = () => {
                 <div className="underRower">
                     <p>Of course, if we compare this footprint with other ones as gas or oil is not that much, but still there is a gap of opportunity and responsibility from AI companies to build a way for these machines to be less impactful on our planet. </p>
                 </div>
-                <InfoCard>
+                <InfoCard >
                     <CheckIcon size={40}/>
                     <h1 className="titulo neonTitleWhite">What are the initiatives to reduce it in the future?</h1>
                     <p>Part of a forecast and projection of energy demand, it is estimated that data centers could be producing more than the double by 2030. (Boston Consulting Group). </p>
@@ -69,7 +69,7 @@ const Carbon = () => {
 
                 </InfoCard>
 
-                <h2 className="inititativesTitle">Here are some initiatives running at the moment</h2>
+                <Subtitle className="second" color="#D8B7FF">Here are some initiatives running at the moment</Subtitle>
 
                 <InititativesContainer>
                     {cardContent.map((object, index) => (
@@ -111,6 +111,31 @@ const Carbon = () => {
 
 export default Carbon
 
+const Subtitle = styled.h1`
+    color: #dedddd;
+    &.second{
+        font-size: 3rem;
+        color: #8135eb;
+        margin-bottom: 2rem;
+    }
+    text-shadow:
+      0 0 5px ${props => props.color || '#00ff00'},
+      0 0 10px ${props => props.color || '#00ff00'},
+      0 0 20px ${props => props.color || '#00ff00'},
+      0 0 40px ${props => props.color || '#00ff00'},
+      0 0 80px ${props => props.color || '#00ff00'};
+    animation: flicker 3s infinite;
+
+    @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+    }
+    20%, 24%, 55% {
+      opacity: 0.4;
+    }
+  }
+`
+
 const InfoCard = styled.div`
     width: 100%;
     display: flex;
@@ -118,6 +143,18 @@ const InfoCard = styled.div`
     align-items: center;
     margin: 2rem 0 3rem 0;
     gap: 2rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.2s ease;
+    padding: 2rem;
+    border-radius: 10px;
+
+    &:hover{
+        box-shadow:
+            0 0 5px #4ca3af,
+            0 0 10px #4ca3af,
+            0 0 20px #4ca3af,
+            0 0 30px #4ca3af;
+        transform: scale(1.05);
+    }
     
     .titulo{
         color: black;

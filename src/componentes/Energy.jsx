@@ -27,17 +27,17 @@ const Energy = () => {
             </Introduction>
             <Title className='secondaryTitle'>How AI Consumes Energy</Title>
             <CardContainer>
-                <Card>
+                <Card className='tarjeta'>
                     <p className='prefix'>1</p>
                     <h3>Training Phase</h3>
                     <p>Training large AI models like GPT-3 involves substantial computational resources. OpenAI’s report (2024) states, “training GPT-3 required thousands of GPUs operating non-stop for weeks.” Every training iteration processes massive datasets repeatedly, leading to tremendous energy expenditure.</p>
                 </Card>
-                <Card>
+                <Card className='tarjeta'>
                     <p className='prefix'>2</p>
                     <h3>Inference Phase </h3>
                     <p>Once trained, AI models continue to consume energy during inference. Each query to a model like ChatGPT requires computational cycles. With billions of queries globally, inference energy use becomes substantial over time (Patterson et al., 2021).</p>
                 </Card>
-                <Card>
+                <Card className='tarjeta'>
                     <p className='prefix'>3</p>
                     <h3>Maintenance and Updates</h3>
                     <p>Maintaining AI systems also consumes energy through continuous retraining, fine-tuning on new data, and software updates. These background processes, though less visible, add significant cumulative energy demand. </p>
@@ -95,15 +95,15 @@ const Energy = () => {
             <Container className='energy'>
                 <Title className='secondaryTitle'>Factors Influencing Energy Consumption</Title>
                 <CardContainer>
-                    <Card>
+                    <Card className='tarjeta second'>
                         <p>Larger models like GPT-4 with billions of parameters demand exponentially more computational power and thus energy (Thompson et al., 2020). </p>
                         <h3>Model Size </h3>
                     </Card>
-                    <Card>
+                    <Card className='tarjeta second'>
                         <p>Modern processors like NVIDIA’s A100 or Google’s TPU v4 are more energy-efficient but are outpaced by increasing AI demand. </p>
                         <h3>Hardware Efficiency </h3>
                     </Card>
-                    <Card>
+                    <Card className='tarjeta second'>
                         <p>Research into Green AI focuses on developing efficient algorithms that require fewer computations for similar performance (Schwartz et al., 2020). </p>
                         <h3>Algorithmic Innovation </h3>
                     </Card>
@@ -113,15 +113,15 @@ const Energy = () => {
             <Container>
                 <Title className='secondaryTitle'>Current Solutions </Title>
                 <CardContainer>
-                    <Card>
+                    <Card className='tarjeta third'>
                         <h3>Renewable Energy </h3>
                         <p>Microsoft’s 2023 Sustainability Report emphasizes a commitment to 100% renewable energy for all data centers by 2025. </p>
                     </Card>
-                    <Card>
+                    <Card className='tarjeta third'>
                         <h3>Model Optimization </h3>
                         <p>Techniques like model pruning, quantization, and knowledge distillation significantly reduce energy needs without major accuracy loss (Xu et al., 2022). </p>
                     </Card>
-                    <Card>
+                    <Card className='tarjeta third'>
                         <h3>Policy Initiatives </h3>
                         <p>The European Commission (2023) launched guidelines promoting green digital transition and sustainable AI practices. </p>
                     </Card>
@@ -134,7 +134,7 @@ const Energy = () => {
         <MiddleCard 
         bigText="“Green AI is about doing more with less: more intelligence, less environmental cost.”"
         smallText="– Roy Schwartz, Noah A. Smith, Oren Etzioni
-                (from the paper <span>“Green AI”</span>, 2019)"
+                (from the paper “Green AI”, 2019)"
         color="#ffee00"
         backgroundPicture={faro}
         />

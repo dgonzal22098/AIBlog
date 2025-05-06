@@ -53,6 +53,48 @@ const Container = styled.div`
         }
     }
 
+    .tarjeta{
+        transition: transform .2s ease-in-out, box-shadow 0.2s ease;
+                
+
+        &:hover{
+            cursor: default;
+            box-shadow:
+                0 0 5px #af8c4c,
+                0 0 10px #af8c4c,
+                0 0 20px #af8c4c,
+                0 0 30px #af8c4c;
+            transform: scale(1.05);
+        }
+
+        &.second{
+            transition: transform .2s ease-in-out, box-shadow 0.2s ease;
+            &:hover{
+                cursor: default;
+                box-shadow:
+                    0 0 5px #af634c,
+                    0 0 10px #af634c,
+                    0 0 20px #af634c,
+                    0 0 30px #af634c;
+                transform: scale(1.05);
+            }
+
+        }
+        &.third{
+            transition: transform .2s ease-in-out, box-shadow 0.2s ease;
+            &:hover{
+                cursor: default;
+                box-shadow:
+                    0 0 5px #9daf4c,
+                    0 0 10px #9daf4c,
+                    0 0 20px #9daf4c,
+                    0 0 30px #9daf4c;
+                transform: scale(1.05);
+            }
+
+        }
+    }
+
     &.carbon{
         width: 80%;
         margin-bottom: 3rem;
@@ -64,19 +106,7 @@ const Container = styled.div`
                 color: #7219BF;
                 font-weight: bold;
             }
-            h2{
-                font-size: 2rem;
-                transition: text-shadow 0.3s ease, color 0.3s ease;
-                &:hover{
-                    color: #D8B7FF;
-                    text-shadow:
-                        0 0 5px #D8B7FF,
-                        0 0 10px #D8B7FF,
-                        0 0 20px #D8B7FF,
-                        0 0 40px #D8B7FF;
-
-                }
-            }
+            
         }
 
         .rower{
@@ -180,9 +210,13 @@ const Container = styled.div`
         .cardInformative{
             align-items: center;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: transform .2s ease-in-out;
+            transition: transform .2s ease-in-out, box-shadow .3s ease-in-out;
             &:hover{
-
+                box-shadow:
+                0 0 5px #4ca3af,
+                0 0 10px #4ca3af,
+                0 0 20px #4ca3af,
+                0 0 30px #4ca3af;
                 transform: scale(1.05);
             }
             p{
@@ -201,6 +235,15 @@ const Container = styled.div`
             padding: 3rem;
             border-radius: 10px;
             gap: 3rem;
+            transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
+            &:hover{
+                transform: scale(1.05);
+                box-shadow:
+                        0 0 10px #0026ff,
+                        0 0 20px #000dff,
+                        0 0 38px #0026ff,
+                        0 0 49px #000dff;
+            }
             img{
                 width: 40%;
                 border-radius: 50%;

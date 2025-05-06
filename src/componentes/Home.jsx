@@ -77,7 +77,10 @@ const Home = () => {
                     </div>
                 </Section>
                 <h1 className="Final">Let's Dive Into It !</h1>
-                <Button onClick={toEnergy}>Let's Go</Button>
+
+                <Button color="#00ff00" onClick={toEnergy}>
+                    <span>Let's Go !</span>
+                </Button>
 
             </Container>
         </>
@@ -91,12 +94,6 @@ const team = [
         career:"System's Engineering", 
         description: "I’m passionate about technology, self-development, and cooking. I also love music, movies, and finding peace in everyday moments",
         foto: fotoDiego
-    },
-    {
-        name: "Sara Daniela Pineda Garzón", 
-        career:"International Business", 
-        description: "She loves to learn new things. What she enjoys the most about her career is that she can learn other cultures.",
-        foto: saraPic,
     },
     {
         name: "Juan Camilo Castiblanco González", 
@@ -116,11 +113,13 @@ const team = [
         description: "Passionate about nature, travel, and finding balance between work, life, and learning.", 
         foto: lozanoPic
     },
+    {
+        name: "Sara Daniela Pineda Garzón", 
+        career:"International Business", 
+        description: "She loves to learn new things. What she enjoys the most about her career is that she can learn other cultures.",
+        foto: saraPic,
+    },
 ];
-
-// const Title = styled.h1`
-//     margin: 2rem 0 10rem 0;    
-// `
 const TeamContainer = styled.div`
     width: 80%;
     display: grid;
@@ -207,17 +206,41 @@ const Section = styled.div`
 
 `
 const Button = styled.button`
-    padding: 1rem 2rem;
-    margin-bottom: 5rem;
-    border-radius: 10px;
-    background-color: black;
+  padding: 1rem 2rem;
+  margin-bottom: 5rem;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 25%;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: #3f3232;
+    cursor: pointer;
+  }
+
+  span {
+    display: inline-block;
     color: white;
-    transition: .2s ease-in-out;
-    font-size: 1.5rem;
-    font-weight: bold;
-    width: 25%;
-    &:hover{
-        background-color: #1f1f1f;
-        cursor: pointer;
+    text-shadow:
+      0 0 5px ${props => props.color || '#00ff00'},
+      0 0 10px ${props => props.color || '#00ff00'},
+      0 0 20px ${props => props.color || '#00ff00'},
+      0 0 40px ${props => props.color || '#00ff00'},
+      0 0 80px ${props => props.color || '#00ff00'};
+    animation: flicker 3s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
     }
-`
+    20%, 24%, 55% {
+      opacity: 0.4;
+    }
+  }
+`;

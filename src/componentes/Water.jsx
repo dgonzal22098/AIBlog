@@ -167,6 +167,7 @@ const Card = styled.div`
     justify-content: center;
     background-color: white;
     border-radius: 10px;
+    
 `
 const HeaderPicture = styled.div`
     position: absolute;
